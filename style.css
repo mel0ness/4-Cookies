@@ -1,6 +1,6 @@
 *, ::before, ::after {
     box-sizing: border-box;
-    margin: 0;
+    margin: 0; 
     padding: 0;
 }
 body {
@@ -8,4 +8,118 @@ body {
     font-family: Lato, sans-serif;
     background: linear-gradient(to right, #ffefba, #ffffff); 
     padding: clamp(20px, 5vw, 50px) 20px 10px;
+}
+
+h1 {
+    font-weight: 300;
+    text-align: center;
+}
+
+.P4-boldTitle {
+    font-weight: 400;
+}
+
+.P4-img {
+    width: 30px;
+    height: 30px;
+    margin-left: 10px;
+}
+
+form {
+    margin-top: 40px;
+}
+
+.P4-input {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    width: 30%;
+}
+
+input {
+    width: 100%;
+    margin-top: 5px;
+    margin-bottom: 25px;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+    border: none;
+    padding: 7px;
+    padding-left: 10px;
+}
+
+input:focus {
+    outline: none;
+}
+
+label {
+    font-family: raleway, sans-serif;
+    font-weight: 700;
+font-size: 12px;
+}
+
+.P4-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 10px;
+}
+
+button {
+    padding: 10px;
+    background-color: #006c67;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    width: 70px;
+    cursor: pointer;
+}
+
+.P4-cookies {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    width: 30%;
+    margin: auto;
+    margin-top: 40px;
+}
+
+.P4-cookie {
+background-color: white;
+position: relative;
+width: 100%;
+height: 80px;
+border-radius: 5px;
+box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+display: flex;
+flex-direction: column;
+justify-content: center;
+gap: 5px;
+padding: 10px;
+white-space : nowrap;
+overflow: hidden;
+}
+
+.P4-close {
+    background-color: #e0143c;
+    width: 10px;
+    height: 10px;
+    border-radius: 2px;
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 1px 4px;
+    color: white;
+    font-size: 8px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.P4-title {
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.P4-name, .P4-value {
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
