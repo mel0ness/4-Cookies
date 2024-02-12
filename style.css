@@ -78,7 +78,7 @@ button {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 10px;
-    width: 30%;
+    width: 30vw;
     margin: auto;
     margin-top: 40px;
 }
@@ -95,7 +95,6 @@ flex-direction: column;
 justify-content: center;
 gap: 5px;
 padding: 10px;
-white-space : nowrap;
 overflow: hidden;
 }
 
@@ -122,4 +121,13 @@ overflow: hidden;
 .P4-name, .P4-value {
     overflow: hidden;
     text-overflow: ellipsis;
+    white-space: nowrap;
+
+
+}
+
+.P4-error, .P4-datasError {
+    color: red;
+    text-align: center;
+    margin-top: 5px;
 }

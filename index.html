@@ -18,7 +18,7 @@
   <h1>Création de <span class="P4-boldTitle">Cookies</span><img class="P4-img" src="./assets/cookie.png" alt="Cookie">
   </h1>
 
-  <form action="" method="get">
+  <form action="" method="get" id="form">
     <div class="P4-input">
       <label for="name">Son nom</label>
       <input type="text" id="name" name="name">
@@ -28,29 +28,16 @@
       <input type="number" id="value" name="value" min="0">
     </div>
     <div class="P4-buttons">
-      <button>Créer</button>
-      <button>Afficher</button>
+      <button id="create">Créer</button>
+      <button id="display">Afficher</button>
     </div>
+    <div class="P4-error" id="error"></div>
   </form>
-  <div class="P4-cookies">
-    <div class="P4-cookie">
-      <div class="P4-close">X</div>
-      <div class="P4-name"><span class="P4-title">Nom : </span>Laptop</div>
-      <div class="P4-value"><span class="P4-title">Valeur : </span>1000</div>
-    </div>
-    <div class="P4-cookie">
-      <div class="P4-close">X</div>
-      <div class="P4-name"><span class="P4-title">Nom : </span>Laptop</div>
-      <div class="P4-value"><span class="P4-title">Valeur : </span>1000</div>
-    </div>
-    <div class="P4-cookie">
-      <div class="P4-close">X</div>
-      <div class="P4-name"><span class="P4-title">Nom : </span>Laptop de compétition de ouf malade que je kiffe sa
-        grand-mère tellement j'en ai chié pour le construire</div>
-      <div class="P4-value"><span class="P4-title">Valeur : </span>1000</div>
-    </div>
+  <div class="P4-cookies" id="displayDatas">
+
 
   </div>
+  <div class="P4-datasError" id="datasError"></div>
   <script src="app.js"></script>
 </body>
 
