@@ -175,6 +175,7 @@ overflow: hidden;
     border-radius: 5px;
     color: white;
     padding: 5px;
+    cursor: pointer;
 }
 
 .P4-green {
