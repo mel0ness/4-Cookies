@@ -112,7 +112,8 @@ const NewCookie = () => {
     let date = new Date();
     date.setTime(date.getTime() + 1 * 24 * 60 * 60 * 1000);
     let expires = "";
-    expires = ";expires=" + date.toISOString();
+    expires = ";expires=" + date.toGMTString();
+    console.log(expires);
       document.cookie = cookieToCreate[0] +' = ' + cookieToCreate[1] + "/" +  newCookie + " " + expires + " " + "; path=/";
       cookieToCreate=[];
       cookieStore = [...cookieStore, objectCookie];
