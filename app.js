@@ -15,8 +15,7 @@ else {
 
 const readCookies = () => {
 for(let i = 0; i < cookie.length; i++) {
-  let ghostCookie = cookie[i].slice(0, cookie[i].length-25);
-  ghostCookie = ghostCookie.split("/");
+  let ghostCookie = cookie[i].split("/")
 cookieStore.push(JSON.parse(ghostCookie[1]))}}
 
 getCookie();
@@ -113,7 +112,7 @@ const NewCookie = () => {
     let date = new Date();
     date.setTime(date.getTime() + 1 * 24 * 60 * 60 * 1000);
     let expires = "";
-    expires = "" + date.toISOString();
+    expires = ";expires=" + date.toISOString();
       document.cookie = cookieToCreate[0] +' = ' + cookieToCreate[1] + "/" +  newCookie + " " + expires + " " + "; path=/";
       cookieToCreate=[];
       cookieStore = [...cookieStore, objectCookie];
