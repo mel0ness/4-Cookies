@@ -61,6 +61,7 @@ if(cookieStore.length < 1) {
   DatasError.appendChild(Data);
 }
 else{
+  newIDs(cookieStore)
 CreateDatas(cookieStore);
 const close = document.getElementsByClassName("P4-close");
 CreateEventListener(close);}})
@@ -84,7 +85,7 @@ const CreateDatas = (e) => {
 const CreateElement = (e) => {
     const Data = document.createElement("div");
     Data.classList.add("P4-cookie");
-    Data.setAttribute("id", e.id)
+    Data.setAttribute("id", e.id);
     Data.innerHTML = `
     <div class="P4-close" value=${e.id}>X</div>
     <div class="P4-name"><span class="P4-title">Nom : </span>${e.name}</div>
