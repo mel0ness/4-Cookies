@@ -113,7 +113,6 @@ const NewCookie = () => {
     date.setTime(date.getTime() + 1 * 24 * 60 * 60 * 1000);
     let expires = "";
     expires = ";expires=" + date.toGMTString();
-    console.log(expires);
       document.cookie = cookieToCreate[0] +' = ' + cookieToCreate[1] + "/" +  newCookie + " " + expires + " " + "; path=/";
       cookieToCreate=[];
       cookieStore = [...cookieStore, objectCookie];
@@ -126,7 +125,7 @@ const NewCookie = () => {
 }
 
   const deleteCookie = (e) => {
-document.cookie = e.name + ' = ;' + "expires=Thu, 01 Jan 70 00:00:01 GMT"
+document.cookie = e.name +'=; Path=/; Expires=Thu, 01 Jan 1970 00:00:01 GMT;'
   }
   
 const modale = () => {
