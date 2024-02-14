@@ -36,6 +36,7 @@ form {
     width: 30%;
 }
 
+
 input {
     width: 100%;
     margin-top: 5px;
@@ -131,3 +132,86 @@ overflow: hidden;
     text-align: center;
     margin-top: 5px;
 }
+
+.P4-modale {
+    background: linear-gradient(to right, #ffefba, #ffffff); 
+    border: solid 2px #006c67;
+    border-radius: 10px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    text-align: center;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.P4-modaleVisible {
+    width: 200px;
+    height: 170px;
+    opacity: 1;
+    transition: all 0.5s;
+}
+
+.P4-modaleInvisible {
+    width: 0;
+    height: 0;
+    opacity: 0;
+    border: none;
+    padding: 0;
+    transition: all 0.5s;
+}
+
+.P4-modaleTitle {
+    font-weight: 700;
+}
+
+.P4-modaleButton {
+    width: 50px;
+    background-color: #006c67;
+    border-radius: 5px;
+    color: white;
+    padding: 5px;
+}
+
+.P4-green {
+    color: green;
+}
+
+.P4-red {
+    color: red;
+}
+
+@media(max-width: 1200px) {
+    .P4-input {
+        width: 40%;
+    }
+
+    .P4-cookies {
+        width: 50vw;
+    }
+}
+
+@media(max-width: 900px) {
+    .P4-input {
+        width: 50%;
+    }
+
+    .P4-cookies {
+        width: 60vw;
+    }
+}
+
+@media(max-width: 500px) {
+    .P4-input {
+        width: 70%;
+    }
+
+    .P4-cookies {
+        width: 90vw;
+    }
+}
+
