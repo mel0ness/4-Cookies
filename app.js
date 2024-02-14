@@ -11,18 +11,13 @@ idCookie = 1;
 else {
   cookie = document.cookie.split(";");
   readCookies();
-    idCookie = cookieStore.length + 1;
-}
-}
+    idCookie = cookieStore.length + 1;}}
 
 const readCookies = () => {
 for(let i = 0; i < cookie.length; i++) {
   let ghostCookie = cookie[i].slice(0, cookie[i].length-25);
   ghostCookie = ghostCookie.split("/");
-cookieStore.push(JSON.parse(ghostCookie[1]))
-
-}
-}
+cookieStore.push(JSON.parse(ghostCookie[1]))}}
 
 getCookie();
 
@@ -38,10 +33,8 @@ const DisplayPlace = document.getElementById("displayDatas");
 const DatasError = document.getElementById("datasError");
 const Modale = document.getElementById("modale");
 
-
 form.addEventListener("submit", (e) => {
 e.preventDefault();
-
 })
 
 Create.addEventListener("click", () => {
@@ -55,11 +48,7 @@ Create.addEventListener("click", () => {
         error.textContent = "";
       idCookie++;
       createCookie();
-      
         objectCookie={};
-       
-       
-       
         }
 })
 
@@ -74,20 +63,13 @@ if(cookieStore.length < 1) {
 else{
 CreateDatas(cookieStore);
 const close = document.getElementsByClassName("P4-close");
-CreateEventListener(close);
-
-}
-})
+CreateEventListener(close);}})
 
 const CreateEventListener = (e) => {
     for(let i=0; i < e.length; i++) {
       e[i].addEventListener("click", (e) => {
         toFind = e.srcElement.attributes.value.value;
-modale();
-      })
-
-    }
-}
+modale();})}}
 
 const newIDs = (e) => {
     for (let i = 0; i < e.length; i++) {
@@ -97,10 +79,7 @@ const newIDs = (e) => {
 
 const CreateDatas = (e) => {
     for(let i=0; i < e.length; i++) {
-        CreateElement(e[i])
-
-    }
-}
+        CreateElement(e[i])}}
 
 const CreateElement = (e) => {
     const Data = document.createElement("div");
@@ -112,8 +91,6 @@ const CreateElement = (e) => {
     <div class="P4-value"><span class="P4-title">Valeur : </span>${e.Value}</div>
   `;
   DisplayPlace.appendChild(Data);
-
-
 }
 
 const createCookie = () => {
@@ -136,14 +113,12 @@ const NewCookie = () => {
     date.setTime(date.getTime() + 1 * 24 * 60 * 60 * 1000);
     let expires = "";
     expires = "" + date.toISOString();
-
       document.cookie = cookieToCreate[0] +' = ' + cookieToCreate[1] + "/" +  newCookie + " " + expires + " " + "; path=/";
       cookieToCreate=[];
       cookieStore = [...cookieStore, objectCookie];
       Toast("green", "ajouté", "Votre cookie a bien été ")
       value.value = "";
       Name.value = "";}
-
       else {
         Toast("red", "Veuillez modifier le nom", "Votre cookie existe déjà : ")
       }
@@ -160,7 +135,6 @@ setTimeout(() => {
   Modale.innerHTML = `    <div class="P4-modaleTitle">Voulez-vous supprimer ce cookie?</div>
   <div class="P4-modaleButton" id="Yes">Oui</div>
   <div class="P4-modaleButton" id="No">Non</div>`
-
   const Yes = document.getElementById("Yes")
 const No = document.getElementById("No")
 
